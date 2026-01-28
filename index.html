@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Time!</title>
+    <style>
+        body{
+            justify-content: center;
+        }
+        button{
+            color: darkslateblue;
+            padding: 10px;
+            border: darkblue solid 2px;
+            border-radius: 10px;
+            font-size: 10px;
+            width: 100px;
+        }
+        button:hover{
+            color: white;
+            padding: 10px;
+            border: rgb(96, 119, 126) solid 2px;
+            border-radius: 10px;
+            font-size: 10px;
+            background-color: darkblue;
+
+        }
+        .b{
+            display: grid;
+            grid-template-columns: repeat(2);
+            gap: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" style="border-top: darkblue solid 20px; border-radius: 30px; background-color: lightblue; padding: 20px; width: 500px; margin: auto;">
+        <h2 style="text-align: center;">Math Time!</h2>
+
+        <div style="background-color: rgba(41, 62, 69, 0.5); width: 400px; padding: 10px; border-radius: 10px; margin: auto;">
+            <form style="text-align: center;">
+                <input type="number" id="num1" placeholder="Enter First Number">
+                <input type="number" id="num2" placeholder="Enter Second Number">
+            </form>
+        </div>
+
+        <br>
+        <div class="b" style="text-align: center; align-items: center; display: flex;">
+            <div style="width: 200px;">
+                <button onclick="Sum()">Sum</button>
+                <button onclick="Diff()">Difference</button>
+                <button onclick="Pro()">Product</button>
+                <button onclick="Quo()">Quotient</button>
+            </div>
+            <div id="result" style="border-top: darkblue solid 10px; border-radius: 30px; background-color: lightblue; padding: 20px; width: 200px; margin: auto; position: relative; text-align: center; font-size: 30px; background-color: white; height: 150px;" ></div>
+        </div>
+
+        <div style="font-size: 10px;">
+            <p>Date:</p>
+        <div id="date"></div>
+</div>
+
+    </div>
+
+
+
+    
+    <script>
+        const d = new Date();
+            document.getElementById("date").innerHTML = d;
+
+        function Sum(){
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+
+            let Res_sum= n1 + n2
+            document. getElementById('result').innerHTML = "Sum:" + "<br>" + n1 + "+" + n2 + "=" + Res_sum;
+        }
+        function Diff(){
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+
+            let Res_sum= n1 - n2
+            document. getElementById('result').innerHTML = "Difference:" + "<br>" + n1 + "-" + n2 + "=" + Res_sum;
+        }
+        function Pro(){
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+
+            let Res_sum= n1 * n2
+            document. getElementById('result').innerHTML =  "Product:" + "<br>" + n1 + "*" + n2 + "=" + Res_sum;
+        }
+        function Quo(){
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+
+            let Res_sum= n1 / n2
+            document. getElementById('result').innerHTML = "Quotient:" + "<br>" + n1 + "/" + n2 + "=" + Res_sum;
+        }
+
+
+    </script>
+</body>
+</html>
